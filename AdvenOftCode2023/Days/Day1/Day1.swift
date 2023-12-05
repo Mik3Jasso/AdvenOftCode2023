@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct Day1: View {
-    let dealer = Day1InfoDealler()
+    @ObservedObject var dealer = Day1InfoDealler()
     var body: some View {
         List(dealer.data, id: \.self) { result in
             VStack(alignment: .leading) {
@@ -20,9 +20,9 @@ struct Day1: View {
         }
         Spacer()
         Button(action: {
-            print(dealer.printAllTrebochet())
+            dealer.printAllTrebochet()
         }, label: {
-            Text("Print All")
+            Text("Sum: \(dealer.sum)")
         })
     }
 }

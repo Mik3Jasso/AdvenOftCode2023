@@ -6,12 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
 
-class Day1InfoDealler {
+class Day1InfoDealler: ObservableObject {
     
     public var data: [String] {
         return getData()
     }
+    
+    @Published public var sum = 0
     
     private func getData() -> [String] {
         return [
@@ -1018,19 +1021,18 @@ class Day1InfoDealler {
         ]
     }
     
-     func printAllTrebochet() -> String{
+     func printAllTrebochet(){
         var finalString = ""
         var sum = 0
         for string in data {
             var numbers = string.numbers
             guard let initial = numbers.first, let final = numbers.last else {
-                return ""
+                return 
             }
             numbers = "\(initial)\(final)"
-            finalString += "\(numbers), "
             sum += Int(numbers) ?? 0
         }
-         return finalString
+         self.sum = sum
     }
     
      func trebochet(word: String) -> String {
