@@ -11,11 +11,6 @@ import SwiftUI
 struct Day1: View {
     let dealer = Day1InfoDealler()
     var body: some View {
-        Button(action: {
-            print(dealer.printAllTrebochet())
-        }, label: {
-            Text("Print All")
-        })
         List(dealer.data, id: \.self) { result in
             VStack(alignment: .leading) {
                 Text(result).fontWeight(.bold)
@@ -23,6 +18,12 @@ struct Day1: View {
             }
             .padding(.bottom, -1.0)
         }
+        Spacer()
+        Button(action: {
+            print(dealer.printAllTrebochet())
+        }, label: {
+            Text("Print All")
+        })
     }
 }
 

@@ -8,17 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    var titles: [String] {
-        return [
-            "Day 1: Trebuchet?"
-        ]
-    }
     
     var body: some View {
         NavigationView {
-            List(titles, id: \.self) { item in
-                NavigationLink(destination: Day1()) {
-                    Text(item)
+            List(AllScreens.allCases, id: \.self) { item in
+                NavigationLink(destination: item.view) {
+                    Text(item.title)
                 }
             }
         }.navigationTitle("Advent Of Code 2023")
