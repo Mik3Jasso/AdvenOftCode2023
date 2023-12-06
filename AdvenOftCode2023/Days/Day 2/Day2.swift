@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct Day2: View {
+    @ObservedObject var manager = Day2Manager()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(manager.data, id: \.id) { result in
+            VStack(alignment: .leading) {
+                Text("\(result.id)").fontWeight(.bold)
+            }
+            .padding(.bottom, -1.0)
+        }
+        Spacer()
+        Button(action: {
+            manager.countPossibleGames()
+        }, label: {
+            Text("Sum: \(manager.sum)")
+        })
     }
 }
 
