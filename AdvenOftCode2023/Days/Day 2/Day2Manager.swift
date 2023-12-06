@@ -27,21 +27,33 @@ class Day2Manager: ObservableObject {
     
     func countPossibleGames() {
         var possibleGames: [Game] = []
-        for g in data {
+        for var g in data {
             var passGame = true
+            var maxCubeRed = 0
+            var maxCubeGreen = 0
+            var maxCubeBlue = 0
             for t in g.turns {
                 var passTurn = true
                 for c in t.cubes {
                     switch c.color {
                     case .green:
+                        if c.cuantity > maxCubeGreen {
+                            maxCubeGreen = c.cuantity
+                        }
                         if c.cuantity > maxGreen {
                             passTurn = false
                         }
                     case .red:
+                        if c.cuantity > maxCubeRed {
+                            maxCubeRed = c.cuantity
+                        }
                         if c.cuantity > maxRed {
                            passTurn = false
                         }
                     case .blue:
+                        if c.cuantity > maxCubeBlue {
+                            maxCubeBlue = c.cuantity
+                        }
                         if c.cuantity > maxBlue {
                             passTurn = false
                         }
@@ -52,13 +64,21 @@ class Day2Manager: ObservableObject {
                     continue
                 }
             }
+            g.maxCubeRed = maxCubeRed
+            g.maxCubeGreen = maxCubeGreen
+            g.maxCubeBlue = maxCubeBlue
+            var m = g.maxCubeRed * g.maxCubeBlue * g.maxCubeGreen
+            sum += m
             if passGame {
                 possibleGames.append(g)
             }
+
         }
-        let gamesIds = possibleGames.map { $0.id}
-        let sumGames = gamesIds.reduce(0, +)
-        sum = sumGames
+        
+        // Part 1
+//        let gamesIds = possibleGames.map { $0.id}
+//        let sumGames = gamesIds.reduce(0, +)
+//        sum = sumGames
     }
     
     private func loadData(initialGameString: String) -> Game? {

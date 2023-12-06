@@ -30,4 +30,8 @@ struct Game {
     
     var turns: [Turn] = []
     var id: Int
+    
+    var maxCubeRed: Int = 0
+    var maxCubeGreen: Int = 0
+    var maxCubeBlue: Int = 0
 }

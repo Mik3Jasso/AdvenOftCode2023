@@ -13,7 +13,9 @@ struct Day2: View {
     var body: some View {
         List(manager.data, id: \.id) { result in
             VStack(alignment: .leading) {
-                Text("\(result.id)").fontWeight(.bold)
+                Text("Game \(result.id)").fontWeight(.bold)
+                Text("turns: \(result.turns.count)").fontWeight(.light)
+
             }
             .padding(.bottom, -1.0)
         }
