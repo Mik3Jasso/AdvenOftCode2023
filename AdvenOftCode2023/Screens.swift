@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 enum AllScreens: CaseIterable, Identifiable {
-    case day1, day2, day3
+    case day1, day2, day3, day4
 
     var id: Self { self }
 
@@ -18,6 +18,7 @@ enum AllScreens: CaseIterable, Identifiable {
         case .day1: Day1()
         case .day2: Day2()
         case .day3: Day3()
+        case .day4: Day4()
         }
     }
     
@@ -26,6 +27,7 @@ enum AllScreens: CaseIterable, Identifiable {
         case .day1: "Day 1: Trebuchet?"
         case .day2: "Day 2: Cube Conundrum"
         case .day3: "Day 3: Gear Ratios"
+        case .day4: "Day 4: Scratchcards"
         }
     }
 }

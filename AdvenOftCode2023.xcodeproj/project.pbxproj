@@ -22,6 +22,8 @@
 		6350A5B72B1FFE290090D245 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350A5B62B1FFE290090D245 /* Entities.swift */; };
 		6350A5BA2B20E8F20090D245 /* ManagerDay3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350A5B92B20E8F20090D245 /* ManagerDay3.swift */; };
 		6350A5BC2B20E8FA0090D245 /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350A5BB2B20E8FA0090D245 /* Day3.swift */; };
+		6350A5BF2B215E990090D245 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350A5BE2B215E980090D245 /* Day4.swift */; };
+		6350A5C12B215EA20090D245 /* Day4Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6350A5C02B215EA20090D245 /* Day4Manager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		6350A5B62B1FFE290090D245 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		6350A5B92B20E8F20090D245 /* ManagerDay3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerDay3.swift; sourceTree = "<group>"; };
 		6350A5BB2B20E8FA0090D245 /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
+		6350A5BE2B215E980090D245 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
+		6350A5C02B215EA20090D245 /* Day4Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4Manager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +164,8 @@
 		6350A5AE2B1FD38D0090D245 /* Days */ = {
 			isa = PBXGroup;
 			children = (
-				6350A5B82B20E8E30090D245 /* Day3 */,
+				6350A5BD2B215E8B0090D245 /* Day4 */,
+				6350A5B82B20E8E30090D245 /* Day3 Not completed */,
 				6350A5AF2B1FD3B60090D245 /* Day1 */,
 				6350A5A92B1FD1B10090D245 /* Day 2 */,
 			);
@@ -176,13 +181,22 @@
 			path = Day1;
 			sourceTree = "<group>";
 		};
-		6350A5B82B20E8E30090D245 /* Day3 */ = {
+		6350A5B82B20E8E30090D245 /* Day3 Not completed */ = {
 			isa = PBXGroup;
 			children = (
 				6350A5B92B20E8F20090D245 /* ManagerDay3.swift */,
 				6350A5BB2B20E8FA0090D245 /* Day3.swift */,
 			);
-			path = Day3;
+			path = "Day3 Not completed";
+			sourceTree = "<group>";
+		};
+		6350A5BD2B215E8B0090D245 /* Day4 */ = {
+			isa = PBXGroup;
+			children = (
+				6350A5BE2B215E980090D245 /* Day4.swift */,
+				6350A5C02B215EA20090D245 /* Day4Manager.swift */,
+			);
+			path = Day4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,9 +330,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6350A5AB2B1FD1BA0090D245 /* Day2.swift in Sources */,
+				6350A5BF2B215E990090D245 /* Day4.swift in Sources */,
 				6350A5B52B1FFC860090D245 /* Day2Manager.swift in Sources */,
 				6350A5B22B1FD3B60090D245 /* Day1.swift in Sources */,
 				6350A57C2B1FB3CD0090D245 /* ContentView.swift in Sources */,
+				6350A5C12B215EA20090D245 /* Day4Manager.swift in Sources */,
 				6350A5AD2B1FD3690090D245 /* Screens.swift in Sources */,
 				6350A5B32B1FD3B60090D245 /* Day1InfoDealler.swift in Sources */,
 				6350A5BC2B20E8FA0090D245 /* Day3.swift in Sources */,
